@@ -1,0 +1,52 @@
+/* GLOBALS */
+
+input[type='text'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+input[type='color'],
+textarea {
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border-bottom: 1px solid rgba(3, 76, 119, 0.5);
+	-webkit-text-fill-color: #034C77;
+	-webkit-box-shadow: none;
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+label {
+}
+
+select {
+	-webkit-appearance: none;
+	background: transparent;
+	border: none;
+}
+
+
+/* FORM MESSAGES */
+input.jqInvalid,
+textarea.jqInvalid,
+select.jqInvalid{
+}
+
+form div.jqInvalid {
+}

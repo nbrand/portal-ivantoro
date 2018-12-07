@@ -1,0 +1,161 @@
+@mixin font-size($sizeValue: 16) {
+	font-size: $sizeValue + px;
+	font-size: $sizeValue / 16 + rem;
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin flex {
+	display: -webkit-box; display: -ms-flexbox; display: flex;
+}
+@mixin flex-vertical {
+	-webkit-box-align: center; -ms-flex-align: center; align-items: center;
+}
+@mixin flex-vertical-end {
+	-webkit-box-align: end; -ms-flex-align: end; align-items: flex-end;
+}
+@mixin flex-horizontal {
+	-webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+}
+
+@mixin flex-horizontal-start {
+	-webkit-box-align: start; -ms-flex-align: start; align-items: flex-start;
+}
+
+@mixin flex-horizontal-end {
+	-webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end;
+}
+
+@mixin inline-flex {
+	display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex;
+}
+
+@mixin flex-wrap {
+	-ms-flex-wrap: wrap; flex-wrap: wrap;  -webkit-flex-wrap: wrap;
+}
+
+@mixin flex-direction-column {
+	-webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;
+}
+
+@mixin animation($animate...) {
+	$max: length($animate);
+	$animations: '';
+
+	@for $i from 1 through $max {
+		$animations: #{$animations + nth($animate, $i)};
+
+		@if $i < $max {
+			$animations: #{$animations + ", "};
+		}
+	}
+	-webkit-animation: $animations;
+	-moz-animation:    $animations;
+	-o-animation:      $animations;
+	animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
+	@keyframes #{$animationName} {
+		@content;
+	}
+}
+
+@mixin image-hover-anim {
+	@include transform(scale(1.2, 1.2));
+	transition-duration: 2s;
+}
+
+@mixin image-anim {
+	@include transform(scale(1, 1));
+	transition-property: all;
+	transition-duration: 0.8s;
+}
+
+/************MEDIA QUERIES******************/
+/* Small only */
+@mixin small-only {
+	@media screen and (max-width: 39.9375em) {
+		@content;
+	}
+}
+
+/* medium */
+@mixin medium-only {
+	@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media only screen and (min-width: 40em) {
+		@content;
+	}
+}
+
+/* large */
+@mixin large-only {
+	@media only screen and (min-width: 64em) and (max-width: 90em) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media only screen and (min-width: 64em) {
+		@content;
+	}
+}
+
+
+/* X large */
+@mixin xlarge {
+	@media only screen and (min-width: 90em) {
+		@content;
+	}
+}
+
+/* X Super large */
+@mixin xxlarge {
+	@media only screen and (min-width: 120em) {
+		@content;
+	}
+}
+
+/* height */
+@mixin medium-height {
+	@media only screen and (min-height: 600px) {
+		@content;
+	}
+}
+@mixin large-height {
+	@media only screen and (min-height: 700px) {
+		@content;
+	}
+}

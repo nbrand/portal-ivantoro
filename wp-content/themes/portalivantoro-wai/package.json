@@ -1,0 +1,28 @@
+{
+  "name": "Graum",
+  "version": "0.0.1",
+  "description": "Graum theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Filipe Pinto",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-browser-sync": "*",
+    "grunt-concat-css": "*",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-newer": "*",
+    "grunt-postcss": "^0.8.0"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.4.4-rc1"
+  }
+}

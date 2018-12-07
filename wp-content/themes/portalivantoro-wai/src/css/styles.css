@@ -1,0 +1,67 @@
+/************MEDIA QUERIES******************/
+/* Small only */
+/* medium */
+/* large */
+/* X large */
+/* X Super large */
+/* height */
+/* line 10, ../sass/_global.scss */
+html {
+  max-width: 100%;
+  overflow-y: inherit !important;
+}
+
+/* line 15, ../sass/_global.scss */
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  background-color: #fff;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  overflow-y: inherit !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: visible;
+}
+/* line 27, ../sass/_global.scss */
+body.modal-open {
+  overflow-y: hidden !important;
+}
+
+/* Fonts */
+/* UL and  LI */
+/* MODALS */
+/* GLOBALS */
+/* line 20, ../sass/_forms.scss */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 1px solid rgba(3, 76, 119, 0.5);
+  -webkit-text-fill-color: #034C77;
+  -webkit-box-shadow: none;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* line 38, ../sass/_forms.scss */
+select {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+}
+
+/* FORM MESSAGES */
+/* line 1, ../sass/_footer.scss */
+footer {
+  width: 100%;
+}
+
+/* TITLES */
